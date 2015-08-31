@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/components/home/homeController.js"></script>
+    <script src="app/components/about/aboutController.js"></script>
+    <script src="app/components/search/searchController.js"></script>
+    <script src="app/shared/sidebar/sidebarDirective.js"></script>
+    <script src="app/components/artist/artistController.js"></script>
+    <link type="text/css" href="assets/css/main.css"/>
+</head>
+<body ng-app="app" ng-controller="homeController as main">
+
+<!-- HEADER AND NAVBAR -->
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Zitipy</a>
+            </div>
+ <div class="input-group col-lg-6">
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span>
+        </span>
+    <input type="text" id="search" class="form-control" ng-model="searchInput"  ng-keyup="$event.keyCode == 13 ? performSearch() : null">
+</div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/home"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#/about"><i class="fa fa-shield"></i> About</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<div class="row">
+<div  sidebar></div>
+<div id="main" class="col-lg-9">
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+</div>
+</div>
+</body>
+</html>

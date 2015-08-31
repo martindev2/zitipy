@@ -1,0 +1,19 @@
+<h1>Artist : {{ artist.name }}</h1>
+<h2>Details</h2>
+<ul class="list-unstyled"><li><label class="col-lg-2 text-left">Popularity</label>{{ artist.popularity }}</li>
+</ul>
+
+<h4>Albums</h4>
+<ul class="list-inline"><li data-ng-repeat="album in albums.items">
+    <img src="{{album.images[album.images.length-1].url}}" title="{{album.name}}"/><br/><br/></li>
+</ul>
+
+<h4>Top Tracks</h4>
+<ul class="list-unstyled"><li data-ng-repeat="track in topTracks.tracks">{{track.name}}<img src="{{track.images[track.images.length-1].url}}"/></li>
+</ul>
+
+<h4>Other Artists You may Like</h4>
+<ul class="list-inline"><li data-ng-repeat="artist in related">
+    <a href="#/artist/{{artist.id}}"><img src="{{artist.images[artist.images.length-1].url}}" title="{{artist.name}}"/><br/><br/></a>
+</li>
+</ul>

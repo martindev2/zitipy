@@ -1,0 +1,13 @@
+<!-- search.html -->
+<div class="jumbotron text-center">
+    <h1>Search Results</h1>
+</div>
+<ul class="list-unstyled">
+    <li data-ng-repeat="artist in artists.items track by $index">
+        <div class="row">
+            <span class="col-lg-1 line-number">{{$index+1}}</span>
+            <span class="col-lg-7"><a ng-click="viewArtist($index)">{{artist.name}}</a></span>
+            <span class="col-lg-4"><img src="{{ artist.images[artist.images.length-1].url }}" /></span>
+        </div>
+    </li>
+</ul>
