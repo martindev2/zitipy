@@ -1,0 +1,29 @@
+{
+  "name": "zitify",
+  "version": "1.0.0",
+  "description": "Songify API with Angular",
+  "main": "index.html",
+  "dependencies": {
+    "angular-route": "^1.4.5",
+    "angular": "^1.4.5",
+    "angular-animate": "^1.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martindev2/zitipy.git"
+  },
+  "keywords": [
+    "API",
+    "Angular"
+  ],
+  "author": "M.McArthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martindev2/zitipy/issues"
+  },
+  "homepage": "https://github.com/martindev2/zitipy#readme"
+}
